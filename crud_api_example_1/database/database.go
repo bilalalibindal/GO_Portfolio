@@ -62,7 +62,7 @@ func Connect() {
 
 }
 
-// Disconnect fonksiyonu, uygulamadan çıkarken MongoDB bağlantısını güvenli bir şekilde kapatır.
+// Disconnect function, disconnects the MongoDB connection when the application is closed.
 func Disconnect() {
 	if mongoClient != nil {
 		err := mongoClient.Disconnect(context.Background())
